@@ -10,7 +10,6 @@
 app.directive('gallery', function() {  
 	return {	
 		restrict: 'E',
-		transclude: true,
 		templateUrl: '/test/templates/directives/directive.gallery.html',
 		controller: ['$scope', '$timeout', function($scope, $timeout){
 			$scope.slider = {

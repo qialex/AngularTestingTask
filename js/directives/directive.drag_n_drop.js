@@ -10,7 +10,6 @@
 app.directive('dragndrop', function () {
 	return {	
 		restrict: 'E',
-		transclude: true,
 		templateUrl: '/test/templates/directives/directive.drag_n_drop.html',
 		controller: ['$scope', 'dragNdrop', '$rootScope', function ($scope, dragNdrop, $rootScope) {
 			$scope.goods = {

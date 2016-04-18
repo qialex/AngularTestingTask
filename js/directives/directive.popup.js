@@ -10,7 +10,6 @@
 app.directive('popup', function() { 
 	return {	
 		restrict: 'E',
-		transclude: true,
 		templateUrl: '/test/templates/directives/directive.popup.html',
 		controller: ['$scope', '$rootScope', function($scope, $rootScope){
 			$scope.popup = {

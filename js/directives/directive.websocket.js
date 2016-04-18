@@ -10,7 +10,6 @@
 app.directive('websocket', function() { 
 	return {	
 		restrict: 'E',
-		transclude: true,
 		templateUrl: '/test/templates/directives/directive.websocket.html',
 		controller: ['$scope', '$rootScope', 'WebSocket', function($scope, $rootScope, WebSocket){
 			
