@@ -1,0 +1,49 @@
+/*
+ * Custom CSS for Notifications and chat
+ * @author Alexander Ishchenko <http://qialex.me>
+ * License: MIT
+ */
+
+#chat {
+	padding-left:10px;
+	text-align:left;
+	margin-top:5px;
+	overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100px;
+	min-height: 50px;
+}
+
+.chatHR {
+	margin-bottom:0px;
+}
+
+#numberBox {
+	overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 250px;
+}
+
+#serverIndicator {
+	width:15px;
+	height:15px;
+	border-radius:100px;
+	display:inline-block;
+}
+
+.smallText {
+	font-size:0.8em;
+	margin-left:20px;
+}
+
+.serverStateOk {
+	background-color:green;
+}
+
+.serverStateTroubles {
+	background-color:red;
+}
+
+.chatDate {
+	color:#0486DC;
+}

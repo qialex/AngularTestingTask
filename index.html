@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Meta-Information -->
+    <title>Тестовое задание</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="author" content="http://qialex.me" />
+
+    <!-- Vendor: Bootstrap Stylesheets http://getbootstrap.com -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
+
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="css/custom.css" />
+	<link rel="stylesheet" href="css/custom.gallery.css" />
+	<link rel="stylesheet" href="css/custom.drug-n-drop.css" />
+	<link rel="stylesheet" href="css/custom.popup.css" />
+	<link rel="stylesheet" href="css/custom.notifications.css" />
+
+</head>
+<body ng-app="angularTestingApp">
+
+	<!--[if lt IE 8]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+		your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!-- Content -->
+	<header_directive></header_directive>
+	<div ng-view></div>
+	<footer_directive></footer_directive>
+
+	<!-- Vendor: Javascripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<!-- Vendor: Angular.js -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+
+	<!-- Custom Javascripts -->
+	<script src="js/main.js"></script>
+	<script src="js/directives/_header.js"></script>
+	<script src="js/directives/_footer.js"></script>
+	<script src="js/directives/directive.drag_n_drop.js"></script>
+	<script src="js/directives/directive.gallery.js"></script>
+	<script src="js/directives/directive.popup.js"></script>
+	<script src="js/directives/directive.websocket.js"></script>
+	<script src="js/services/service.dragNdrop.js"></script>
+	<script src="js/services/service.websocket.js"></script>
+	
+</body>
+</html>

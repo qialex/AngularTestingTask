@@ -1,0 +1,40 @@
+<!--
+ AngularJS Gallery
+ @author Alexander Ishchenko <http://qialex.me>
+ License: MIT
+-->
+
+<div id="gallery">
+	<div>
+		<img class="galleryIMGb" ng-src="images/{{ slider.currentSlide.url }}">
+		<div class="galleryMainDescription">{{ slider.currentSlide.name }}</div>
+		<div class="galleryNav">
+			<div class="galleryNavLeft" ng-click="slider.moveSlideManually('previous')"></div>
+			<div class="galleryNavRight" ng-click="slider.moveSlideManually('next')"></div>
+		</div>
+	</div>
+	<div class="galleryItems">
+		<div ng-repeat="image in slider.img" class="galleryItem" ng-click="slider.changeSlideDirectly(this)">
+			<div><img ng-class="slider.currentSlide == image ? 'galleryIMGsNoOpacity' : ''" class="galleryIMGs" ng-src="images/{{ image.url }}"></div>
+			<div>{{image.name}}</div>
+		</div>
+	</div>
+</div>
+
+<div class="settings-margin">
+	<button ng-click="settings.change()" class="btn btn-default">Мини настройка</button>
+	<div ng-if="settings.show" >
+		<br />
+		Задержка при смене кадров <input type="text" ng-model="slider.delay" value="slider.delay" /> мс
+	</div>
+</div>
+
+<pre class="section">
+	Галерея меняет кадр по нажатии на превью
+	Галерея меняет кадр по нажатии на полупрозрачные области по бокам
+	Галерея меняет кадр сама по себе
+	Галерея анимирует превью
+	<i>TODO</i>: Если будет много кадров - горизонтальная прокрутка превью версий
+	<i>TODO</i>: Смена кадра на нажатие на клавиатуре влево - вправо
+	<i>TODO</i>: Анимашка для смены карда
+</pre>

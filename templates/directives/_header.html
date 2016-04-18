@@ -1,0 +1,39 @@
+<!--
+ AngularJS Header
+ @author Alexander Ishchenko <http://qialex.me>
+ License: MIT
+-->
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">Тестовое задание</a>
+        </div>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+				<li ng-class="{active: location.path() == '/' }" ng-click="navbar.currentItem = 1"><a href="#/">Главная</a>
+                </li>	
+                <li ng-class="{active: location.path() == '/gallery' }" ng-click="navbar.currentItem = 2"><a href="#/gallery">Галерея</a>
+                </li>			
+                <li ng-class="{active: location.path() == '/popup' }" ng-click="navbar.currentItem = 3"><a href="#/popup">Pop-up</a>
+                </li>
+                <li ng-class="{active: location.path() == '/dragNdrop' }" ng-click="navbar.currentItem = 4"><a href="#/dragNdrop">Drag`N`Drop</a>
+                </li>				
+                <li ng-class="{active: location.path() == '/notifications' }" ng-click="navbar.currentItem = 5"><a href="#/notifications">Notifications</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+{{ $routeParams }}

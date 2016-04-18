@@ -1,0 +1,117 @@
+/*
+ * Custom CSS for gallery
+ * @author Alexander Ishchenko <http://qialex.me>
+ * License: MIT
+ */
+
+#gallery {
+	margin-top:50px;
+}
+
+.galleryMainDescription {
+	position:relative;
+	top:-65px;
+	height:65px;
+	width:100%;
+	font-size:34px;
+	padding-left:30px;
+	color:white;
+	margin-bottom:-65px;
+}
+
+.galleryNav {
+    position: relative;
+    top: -275px;
+    height: 105px;
+    font-size: 82px;
+    margin-bottom: -105px;	
+	
+}
+
+.galleryNavLeft {
+	float:left;
+	border-radius:0 20px 20px 0;
+	width:30px;
+	height: 105px;
+    padding-left: 30px;
+    background-color: #fff;
+    opacity: 0.25;
+	cursor:pointer;
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.galleryNavLeft:hover {
+	opacity: 0.75;
+}
+
+.galleryNavRight{
+	float:right;
+	border-radius:20px 0 0 20px;
+	width:30px;
+	height: 105px;
+    padding-left: 30px;
+    background-color: #fff;
+    opacity: 0.25;
+	cursor:pointer;
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.galleryNavRight:hover {
+	opacity: 0.75;
+}
+
+.galleryIMGb {
+	width:100%;
+	height:400px;
+	min-height:400px;
+}
+
+.galleryItems {
+	margin-top:10px;
+	text-align:center;
+	cursor:pointer;
+}
+
+.galleryItems {
+
+}
+
+.galleryItem {
+	display:inline-block;
+	margin:0px 5px;
+}
+
+.galleryIMGs {
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+	width:200px;
+	height:100px;
+	min-height:100px;
+	min-width:200px;
+	border-radius:100px;
+	opacity:0.5;
+	z-index:2;
+}
+
+.galleryIMGs:hover {
+	opacity:1;
+}
+
+.galleryIMGsNoOpacity {
+	opacity:1;
+}
+
+.galleryDesc  {
+	position:relative;
+	top:-70px; float:left;
+	margin-bottom:-50px;
+	color:white;
+	background-color:#111;
+	padding:10px;
+	display:inline-block;
+	opacity:0.25;
+	border-radius:20px;
+}
+
+.settings-margin {
+	margin-top:50px;
+}

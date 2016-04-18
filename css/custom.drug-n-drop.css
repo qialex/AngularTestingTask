@@ -1,0 +1,59 @@
+/*
+ * Custom CSS for drag`n`drop
+ * @author Alexander Ishchenko <http://qialex.me>
+ * License: MIT
+ */
+#targetElement {
+	min-height:126px;
+	transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
+}
+
+#targetElement li{
+	transition:background cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s;
+}
+
+.shopWarning {
+	margin:10px 0 30px;
+}
+
+.shopItem {
+	
+	margin:15px 0;
+	background-color:#edefef;
+	padding:10px;
+	display:block;
+	clear:both;
+	min-height:140px;
+}
+
+.shopImageContainer {
+	width:100px;
+	height:100px;
+	margin:10px;
+	float:left;
+}
+.shopImage {
+	width:100px;
+	height:100px;
+	cursor:move;
+}
+
+.shopText{
+	
+}
+
+.shoppingCartList {
+	text-align:left;
+}
+
+.shopImageCart {
+	width:20px;
+	height:20px;	
+}
+
+.shoppingCartRemove {
+	color: red;
+	cursor: pointer;
+	float:right;
+	padding:3px 2px 4px 8px;
+}

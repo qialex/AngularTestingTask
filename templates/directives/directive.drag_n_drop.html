@@ -1,0 +1,51 @@
+<!--
+ AngularJS Drag`N`Drop
+ @author Alexander Ishchenko <http://qialex.me>
+ License: MIT
+-->
+
+<div class="row">
+
+	<div class="col-lg-8">
+		<div class="shopWarning">
+			<span class="label label-success">!</span> Тянем кота за картинку
+		</div>
+	
+		<h3>Товары</h1>
+		<div id="homeElement">
+			<div ng-repeat="item in goods.items | orderBy:'title'" class="shopItem">
+				<div class="shopImageContainer">
+					<img class="shopImage draggable" ng-src="images/{{ item.url }}">
+				</div>
+				<div class="shopText">
+					<h3>{{item.title}}</h3>
+					<div>{{item.descrition}}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-lg-4">
+		<div class="panel panel-default text-center">
+			<div class="panel-heading">
+				<strong>Корзина</strong>
+			</div>
+			<ul class="list-group shoppingCartList" id="targetElement">
+				<li ng-repeat="item in shoppingCart.items" class="list-group-item">
+					<img class="shopImageCart" ng-src="images/{{ item.url }}">
+					{{ item.title }}
+					<i class="fa fa-remove shoppingCartRemove" ng-click="deleteFromCart(item.url)"></i>
+				</li>
+			</ul>
+		</div>
+    </div>
+	
+</div>
+
+<pre class="section">
+	Drag`N`Drop переносит элемент из списка твоаров в список корзины
+	Drag`N`Drop нормально реагирует на неожиданные нажатия правой кнопкой
+	Drag`N`Drop нормально реагирует на вынос элемента за пределы экрана
+	Drag`N`Drop Товары сортируются по алфавиту, корзина - добавляем вниз.
+	<i>TODO</i>: код почище, посимулировать ООП
+</pre>

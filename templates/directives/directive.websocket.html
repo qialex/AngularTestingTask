@@ -1,0 +1,52 @@
+<!--
+ AngularJS WebSocket
+ @author Alexander Ishchenko <http://qialex.me>
+ License: MIT
+-->
+
+<div class="row">
+
+	<div class="col-lg-8">
+		<h3>Что тут у Вас творится? <span class="smallText">Индикатор соединения с сервером</span> <div id="serverIndicator" ng-class="{serverStateOk: +WS.socket.readyState == 1, serverStateTroubles: +WS.socket.readyState !== 1}"></div></h3>
+		<p>По адресу ws://82.146.45.144:8081 расположен мини сервер, который ждет слушателей и работает с ними следующим образом:</p>
+		<p>1. Каждому кто к нему подключится каждые 5 секунд шлет нотификации в виде фраз, которые будут отображаться ниже.</p>
+		<p>2. Если серверу кто-то что-то отпарвит он передаст это сообщение всем см. окно чат(). Чтобы его опробовать можно открыть эту страницу приложения в нескольких вкладках браузера.</p>
+		<p>3. Иногда он по определенным правилам, шлет цифры, которые мы фильтруем и складываем отдельно.</p>
+		<hr />
+		<ul id="messagesFromServer">
+		</ul>
+	</div>
+
+	<div class="col-lg-4">
+		<div class="panel panel-default text-center">
+			<div class="panel-heading">
+				<strong>Чатик. Участников: {{ WS.chatCount }}</strong>
+			</div>
+			<div id="chat">				
+			</div>
+			<hr class="chatHR" />
+			<div class="panel-body">
+				<input type="text" ng-model="chat.message" />
+				<button class="btn btn-default" id="chatSend" ng-click="WS.send(chat.message)">Отправить</button>
+			</div>
+		</div>
+	
+		<div class="panel panel-default text-center">
+			<div class="panel-heading">
+				<strong>Числа от сервера</strong>
+			</div>
+			<ul class="list-group" id="numberBox">
+			</ul>
+		</div>		
+		
+	</div>	
+</div>
+
+<pre class="section">
+	То, что делает скрипт - описано выше.
+	Среди прочего клиент коннектится заново при обрыве связи.
+	В чат можно отпавлять сообщение при нажатии Enter
+	<i>TODO</i>: Имя отправителя в чате
+	<i>TODO</i>: Поработать над кодом, добавить комментарии
+	<i>TODO</i>: Сервер переписать на что-нибудь поинтереснее
+</pre>

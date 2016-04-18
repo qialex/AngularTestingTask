@@ -1,0 +1,39 @@
+<!--
+ AngularJS Popup
+ @author Alexander Ishchenko <http://qialex.me>
+ License: MIT
+-->
+
+<div class="form-horizontal section">
+  <div class="form-group">
+	<label class="col-sm-4 control-label">Загаловок</label>
+	<div class="col-sm-4">
+	  <input type="text" ng-model="popup.title" class="form-control" placeholder="Загаловок" />
+	</div>
+  </div>
+  <div class="form-group">
+	<label class="col-sm-4 control-label">Текст</label>
+	<div class="col-sm-4">
+	  <input type="text" ng-model="popup.text" class="form-control" placeholder="Текст" >
+	</div>
+  </div>
+  <div class="form-group">
+	<div class="col-sm-offset-4 col-sm-10">
+	  <button ng-click="popup.openPopUp()" class="btn btn-default">Вызвать PopUp</button>
+	</div>
+  </div>
+  <div class="form-group">
+	<div class="col-sm-offset-4 col-sm-10">
+	  Количество вызовов (callback action): {{ popup.counter }}
+	</div>
+  </div>  
+</div>
+
+<pre class="section">
+	PopUp закрывается клавишей ESC
+	PopUp проверит наличие текста и заголовка
+	PopUp имеет callback функцию
+	PopUp Закрывается на click-outside
+	<i>TODO</i>: Анимашка сбоку/или/сверху-везжашка
+	<i>NOTE</i>: делал его последним, недовылизывал что-ли, не нравится самому
+</pre>
