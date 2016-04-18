@@ -85,7 +85,7 @@ app.directive('websocket', function() {
 			angular.element(document.querySelector("body")).bind('keydown', PopUpCloseByEnter);
 			
 			$scope.WS.SocketCheckMultiSocket($scope.WS.socket);
-			$scope.WS.SocketConnect("ws://YOUR.IP.ARESS.HERE:8081", $scope.WS.gettingMessage);
+			$scope.WS.SocketConnect("ws://82.146.45.144:8081", $scope.WS.gettingMessage);
 		}]		
 	}
 });			
